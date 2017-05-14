@@ -1,0 +1,70 @@
+<span ng-controller="MainController" >
+<!-- Begin Header -->
+			<header class="row" >
+				<div class="col-sm-1 col-xs-2 " >
+					<img src="http://www.onlinelawsolutions.com/wp-content/uploads/2016/02/nousericon.png" class="img-circle img-thumbnail" alt="">
+				</div>
+				<div class=" col-sm-4 col-xs-5 username" >
+					<h4>{{username}}</h4>{{id}}
+				</div>
+				<button type="button" class="col-xs-offset-4 logout-btn" ng-click="logout()">خروج</button>
+			</header>
+			<!-- End Header -->
+			<!-- Begin Content -->
+			<div class="row content "  >
+				<!-- Begin Lefter -->
+				<div class="col-md-3 col-sm-5 col-xs-6 lefter" >
+					<br>
+					<div class="row" >
+						<div class="input-group">
+							<span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i> </span>
+							<input type="text" class="col-xs-12 form-control" id="user-search" ng-model="user_search"  name="user-search" placeholder="ابحث عن مستخدم" aria-describedby="sizing-addon2" >
+						</div>
+					</div>
+					<hr>
+					<br>
+					<div class="users-list ">
+						<span  >
+							<div ng-repeat="user in users | filter: user_search" class="col-xs-12 user-element " ng-click="active(user.id)" ng-class="{active_user: active_user == user.id}">
+								<div class="col-xs-4">
+									<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQwdK_YRghmYsxVSM-O-H0he3DdcWXtwjmRBRvli5sLK0eJ8HiQHWprkw" class="img-circle img-thumbnail " alt="">
+								</div>
+								<div class=" col-xs-8 username">
+									<h4>{{user.username}}</h4>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<!-- End Lefter -->
+				<!-- Begin chat area -->
+				<div class="col-md-9 col-xs-12 chat" >
+					<div class="row chatting-dialog" >
+						<span ng-repeat="msg in msgs" >
+							<div ng-if="msg.from = id" class="chat-dialog-container  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="person me" >
+									<i class="guest-icon fa fa-user fa-5x" aria-hidden="true"></i>
+								</div>
+								<div class="rchat-dialog right" >{{msg.msg}}</div>
+							</div>
+							<div ng-if="msg.from != id" class="chat-dialog-container  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="person them" >
+									<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQwdK_YRghmYsxVSM-O-H0he3DdcWXtwjmRBRvli5sLK0eJ8HiQHWprkw" class="img-circle img-thumbnail " alt="">
+								</div>
+								<div class="lchat-dialog left" >{{msg.msg}}</div>
+							</div>
+						</span>
+					</div>
+					<div class="col-xs-11 chatting-box"  >
+						<span class="col-xs-12 " >
+							<textarea class="form-control" placeholder="اكتب رسالتك هنا" name="" ng-model="msg"></textarea>
+						</span>
+						<i class="fa fa-send fa-3x " id="send-icon" ng-click="send()" ></i>
+						
+					</div>
+				</div>
+				<!-- End chat area -->
+			</div>
+			<!-- End Content -->
+
+</span>

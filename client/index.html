@@ -1,0 +1,50 @@
+<!-- Begin HTML -->
+<!DOCTYPE html>
+<html ng-app="app">
+	<!-- Begin Head -->
+	<head>
+		<!-- Begin Title -->
+		<title>Angular Chat</title>
+		<!-- End Head -->
+		<!-- Begin style -->
+			<!-- Begin Bootstrap style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap/bootstrap-theme.min.css">
+			<!--  End Bootstrap style  -->
+			<!-- Begin Fontawesome Style -->
+		<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+			<!-- End Fontawesome Style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!-- End style -->
+		<!-- Begin Meta -->
+		<meta charset=utf-8>
+		<meta name=description content="chat , real time Chat , Peer to peer chat , angular chat">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<!-- End Meta -->
+		
+	</head>
+	<!-- End Head -->
+	<!-- Begin Body -->
+	<body >
+		<!-- Begin Fluid Container -->
+		<div class="container-fluid" ng-view>
+			
+		</div>
+		<!-- End Fluid Container -->
+	</body>
+	<!-- End Body -->
+</html>
+<!-- End HTML -->
+<!-- Begin Scripts -->
+	<!-- Begin General & Libs -->
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+	<!-- End General & Libs -->
+	<!-- Begin Angular -->
+<script src="assets/js/angular/app.js"></script>
+<script src="assets/js/angular/services.js"></script>
+<script src="assets/js/angular/controllers.js"></script>
+<script src="assets/js/angular/factories.js"></script>
+	<!-- End Angular -->
+<!-- End Scripts

@@ -1,0 +1,33 @@
+<div class="row" id="login-background" ng-controller="LoginController">
+	<form action="login_submit" class=" login-container col-md-offset-3 col-md-5  col-xs-12" method="POST" accept-charset="utf-8">
+		<div class="row" >
+
+			<span class="col-xs-10" >
+				<span class="error-text" ng-show="exist"  >هذا المستخدم موجود مسبقا*</span>
+				<input type="text" class="form-control" name="username" placeholder="اسم المسخدم" ng-model="username">
+			</span>
+			<span class="username">اسم الدخول</span>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row" >
+			<span class="col-xs-10" >
+				<span class="error-text" ng-show="wrong_password"  >الرقم السري غير صحيح*</span>
+				<input type="password" class="form-control" name="password" placeholder="الرقم السري" ng-model="password">
+			</span>
+			<span class="username">الرقم السري</span>
+		</div>
+		<br>
+		<br>
+		<span class="error-text" ng-show="no_user"  >مستخدم غير موجود*</span>
+		<br>
+		<div class="row" >
+			<button type="button" class="col-md-offset-1 col-xs-4 logout-btn" ng-click="register()"> إنشاء جديد </button>
+			<button type="button" class="col-md-offset-2 col-xs-4 logout-btn" ng-click="login()"> تسجيل دخول</button>		
+		</div>
+				
+	</form>
+</div>
+		
+		

@@ -1,0 +1,225 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+html,body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Droid Arabic Kufi', sans-serif;
+}
+header{
+	background: rgb(27,77,116);
+	padding: .5em; 
+	color: white;
+}
+img{
+	background: white;
+	height: 4em;
+	width: 4em;
+	text-align: center;
+}
+input , textarea , select{
+	text-align: center;
+}
+hr{
+	border-color:  rgb(27,77,116);
+}
+.content {
+	height: 89.5%;
+}
+.container-fluid{
+	height: 100%;
+}
+.username{
+	padding-top: .5em;
+}
+.logout-btn{
+	background:  rgb(255,229,55);
+	color: rgb(27,77,116);
+	border: solid 1px;
+	padding: .5em;
+	font-weight: bold;
+	margin-top: .5em;
+}
+.logout-btn:hover{
+	background:  #FFFFFF;
+}
+.lefter,.chat{
+	height: 100%;
+}
+.lefter{
+	background:  rgb(255,229,55);
+}
+.users-list{
+	max-height: 70%;
+	background: white;
+	overflow-y: auto;
+	margin: 0px;
+}
+.user-element:hover{
+	cursor: pointer;
+	background: rgb(27,77,116);
+	color: #ffffff;
+}
+.users-list::-webkit-scrollbar{
+	width: .3em;
+	background-color: #F5F5F5;
+	height: .52em;
+}
+.users-list::-webkit-scrollbar-thumb{
+	border-radius: 5em;
+	background: #1a4d74;
+}
+
+.chatting-dialog::-webkit-scrollbar{
+	width: .3em;
+	background-color: #F5F5F5;
+	height: .52em;
+}
+.chatting-dialog::-webkit-scrollbar-thumb{
+	border-radius: 5em;
+	background: #1a4d74;
+}
+#login-background{
+	height: 100%;
+	background:  rgb(255,229,55);
+}
+.login-container{
+	margin-top: 10em;
+	background:  rgb(27,77,116);
+	height: 20em;
+	padding:1em; 
+	color: #FFFFFF;
+}
+.chatting-dialog{
+	height: 35.5em;
+	overflow-y: scroll;
+	padding: 1em;
+}
+.chatting-box{
+	position: absolute;
+	bottom: 0;
+	background:  rgb(27,77,116);
+	height: 7em;
+}
+.chatting-box textarea{
+	margin-top: .5em;
+	height: 6em;
+	resize: none;
+	padding-right: 4em;
+}
+#send-icon{
+	cursor: pointer;
+	color: rgb(27,77,116); 
+	padding-top: 1em;
+	padding-left: .5em;
+	position: absolute;
+	right:1em;
+	bottom: .7em;
+}
+#send-icon:hover{
+	color:  rgb(255,229,55);
+}
+.error-text{
+	color: orangered;
+}
+.active_user{
+	background: rgb(27,77,116);
+	color: #FFFFFF;
+}
+.person{
+	height: 4.4375em;
+	width: 5em;
+	border-radius: 100%;
+	-moz-box-shadow: 0px 1px 9px #000000;
+	-webkit-box-shadow: 0px 1px 9px #000000;
+	box-shadow: 0px 1px 9px #000000;
+	overflow: hidden;
+}
+.me{
+	float: right;
+}
+.them{
+	float: left;
+}
+.person img , .small-person img{
+	height: 100%;
+	width: 100%;
+}
+.small-person{
+	overflow: hidden;
+}
+.left{
+	float: left;
+	text-align: left;
+}
+.right{
+	float: right;
+	text-align: right;
+}
+.lchat-dialog , .rchat-dialog{
+	position: relative;
+	margin-left : 2em;
+	margin-right : 2em;
+	margin-top : 1.2em;
+	min-height: 3em;
+	min-width: 20em;
+	border: solid 1px #97ACC0 ;
+	padding-right: 1em;
+	padding-left: 1em;
+	max-width: 80%;
+	word-wrap: break-word;
+}
+.rchat-dialog:after, .rchat-dialog:before {
+	left: 100%;
+	top: 1.5em;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.rchat-dialog:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: .8em;
+	margin-top: -.8em;
+}
+.rchat-dialog:before {
+	border-color: rgba(151, 172, 192, 0);
+	border-left-color: #97ACC0;
+	border-width: 13px;
+	margin-top: -13px;
+}
+.lchat-dialog:after, .lchat-dialog:before {
+	right: 100%;
+	top: 1.5em;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.lchat-dialog:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: .8em;
+	margin-top: -.8em;
+}
+.lchat-dialog:before {
+	border-color: rgba(151, 172, 192, 0);
+	border-right-color: #97ACC0;
+	border-width:13px;
+	margin-top: -13px;
+}
+.chat-dialog-container div{
+	display: inline-block;
+	background: white;
+	color: black;
+	margin-top: .8em;
+}
+.guest-icon{
+	margin-left: .1em;
+	color: #1B4C74;
+}
